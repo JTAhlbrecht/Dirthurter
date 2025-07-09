@@ -1,7 +1,5 @@
 {
-  "itemGroup.dirthurter": "Dirthurter",
-  "block.dirthurter.example_block": "Example Block",
-  "item.dirthurter.example_item": "Example Item",
+  "item.dirthurter.dirthurter": "Dirthurter",
 
   "dirthurter.configuration.title": "Dirthurter Configs",
   "dirthurter.configuration.section.dirthurter.common.toml": "Dirthurter Configs",

@@ -1,5 +1,6 @@
 package com.shadowmaim.dirthurter;
 
+import com.shadowmaim.dirthurter.block.ModBlocks;
 import com.shadowmaim.dirthurter.item.ModItems;
 import org.slf4j.Logger;
 
@@ -65,6 +66,7 @@ public class Dirthurter {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -90,6 +92,10 @@ public class Dirthurter {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.DIRTHURTER);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.DIRTHURTER);
         }
     }
 

@@ -1,6 +1,7 @@
 package com.shadowmaim.dirthurter;
 
 import com.shadowmaim.dirthurter.block.ModBlocks;
+import com.shadowmaim.dirthurter.item.ModCreativeModeTabs;
 import com.shadowmaim.dirthurter.item.ModItems;
 import org.slf4j.Logger;
 
@@ -64,6 +65,8 @@ public class Dirthurter {
         // Note that this is necessary if and only if we want *this* class (Dirthurter) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

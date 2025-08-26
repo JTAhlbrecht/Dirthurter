@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.dirthurter.dirthurter_items"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.DIRTHURTER);
+                output.accept(ModItems.CHISEL);
             }).build());
 
     public static final Supplier<CreativeModeTab> DIRTHURTER_BLOCKS_TAB = CREATIVE_MODE_TAB.register("dirthurter_blocks_tab",
